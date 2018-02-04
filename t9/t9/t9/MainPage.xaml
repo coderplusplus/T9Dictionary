@@ -1,0 +1,161 @@
+﻿<Page
+    x:Class="t9.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:t9"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+    <Page.DataContext>
+        <local:T9ViewModel/>
+    </Page.DataContext>
+   
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <StackPanel 
+            Orientation="Vertical"
+            Margin="30"
+            HorizontalAlignment="Center">
+
+            <StackPanel Orientation="Horizontal">
+
+                <Button 
+                        Width="100" 
+                        Height="100"
+                        Content="1 &#xa;"
+                        Background="Pink"
+                        Margin="10"
+                />
+
+                <Button 
+                        Width="100"
+                        Height="100"
+                        Content="2 &#xa;(a, b, c)"
+                        Tag="2"
+                        Click="numberButtonClicked"
+                        Background="Pink"
+                        Margin="10" 
+                />
+
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="3 &#xa;(d, e, f)"
+                        Click="numberButtonClicked"
+                        Tag="3"
+                        Background="Pink"
+                        Margin="10"
+                />
+    
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="4 &#xa;(g, h, i)"
+                        Click="numberButtonClicked"
+                        Tag="4"
+                        Background="Pink"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                 />
+
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="5 &#xa;(j, k, l)"
+                        Click="numberButtonClicked"
+                        Tag="5"
+                        Background="Pink"
+                        Margin="10"
+                />
+
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="6 &#xa;(m, n, o)"
+                        Click="numberButtonClicked"
+                        Tag="6"
+                        Background="Pink"
+                        Margin="10"
+                />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="7 &#xa;(p, q, r, s)"
+                        Click="numberButtonClicked"
+                        Tag="7" 
+                        Background="Pink"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                />
+
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="8 &#xa;(t, u, v)"
+                        Click="numberButtonClicked"
+                        Tag="8" 
+                        Background="Pink"
+                        Margin="10"
+                />
+
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="9 &#xa;(w, x, y, z)"
+                        Click="numberButtonClicked"
+                        Tag = "9" 
+                        Background="Pink"
+                        Margin="10"
+                />
+            </StackPanel>
+           
+            <StackPanel Orientation="Horizontal">
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="* &#xa;(&lt;)"
+                        Click="backspaceButtonClicked"
+                        Background="Pink"
+                        HorizontalAlignment="Left"
+                        Margin="10"
+                />
+
+                <Button
+                        Width="100"
+                        Height="100"
+                        Content="0 &#xa;(~) "
+                        Click="nextButtonClicked"
+                        Background="Pink"
+                        Margin="10"
+                />
+
+                <Button 
+                        Width="100"
+                        Height="100"
+                        Content="# &#xa;(space)"
+                        Click="spaceButtonClicked"
+                        Background="Pink"
+                        Margin="10"
+                />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <CheckBox 
+                    IsChecked="{Binding isPredictiveChecked, Mode=TwoWay}"
+                    Content="Predictive Text"
+                />
+                <TextBox 
+                    Text="{Binding resultText, Mode=TwoWay}"
+                    Width="215"
+                    Margin="10,0,0,0"
+                />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
